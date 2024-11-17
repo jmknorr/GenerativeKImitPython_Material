@@ -1,0 +1,17 @@
+[project]
+name = "GenerativeKImitPython"
+version = "1.0"
+description = "Das ist unser Repository für den Kurs 'Generative KI mit Python'"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "haystack-ai>=2.6.1",
+    "ipykernel>=6.29.5",
+    "langchain-community>=0.3.3",
+    "langchain-groq>=0.2.0",
+    "langchain-openai>=0.2.3",
+    "langchain>=0.3.4",
+    "langgraph>=0.2.39",
+    "python-dotenv>=1.0.1",
+    "sentence-transformers>=3.2.1",
+]
