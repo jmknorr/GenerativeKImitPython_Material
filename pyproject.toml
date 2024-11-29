@@ -5,13 +5,32 @@ description = "Das ist unser Repository für den Kurs 'Generative KI mit Python'
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "chardet>=5.2.0",
+    "chromadb>=0.5.20",
+    "crewai[tools]>=0.83.0",
+    "datasets>=3.1.0",
+    "faiss-cpu>=1.9.0.post1",
     "haystack-ai>=2.6.1",
     "ipykernel>=6.29.5",
+    "langchain-chroma>=0.1.4",
     "langchain-community>=0.3.3",
+    "langchain-experimental>=0.3.3",
     "langchain-groq>=0.2.0",
+    "langchain-huggingface>=0.1.2",
     "langchain-openai>=0.2.3",
     "langchain>=0.3.4",
     "langgraph>=0.2.39",
+    "libmagic>=1.0",
+    "matplotlib>=3.9.2",
+    "pyarrow>=18.1.0",
     "python-dotenv>=1.0.1",
+    "pytube>=15.0.0",
     "sentence-transformers>=3.3.0",
+    "swarm",
+    "unstructured>=0.16.8",
+    "wikipedia>=1.4.0",
+    "youtube-transcript-api>=0.6.3",
 ]
+
+[tool.uv.sources]
+swarm = { git = "ssh://git@github.com/openai/swarm.git" }

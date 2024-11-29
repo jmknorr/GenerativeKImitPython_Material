@@ -16,16 +16,16 @@ doc = loader.load()
 # %% check the content (3)
 pprint(doc[0].page_content)
 # %% Create splitter instance (4)
-splitter = SemanticChunker(embeddings=OpenAIEmbeddings(), 
-                           breakpoint_threshold_type="cosine", breakpoint_threshold=0.5)
+splitter = SemanticChunker(embeddings=OpenAIEmbeddings())
 
 # %% Apply semantic chunking (5)
 chunks = splitter.split_documents(doc)
 
 # %% check the results (6)
+text = "Cars drive on streets. The cat chased the mouse. The mouse was afraid. "
+
+# %%
+chunks = splitter.split_text(text)
+# %%
 chunks
-# %%
-pprint(chunks[0].page_content)
-# %%
-pprint(chunks[1].page_content)
 # %%

@@ -30,7 +30,9 @@ print(improved_prompt)
 res = model.invoke(improved_prompt)
 print(res.content)
 
-# %%
+# %% baseline result
 res = model.invoke("summer, vacation, beach, Shakespeare poem")
+print("baseline result:")
+print("-"*10)
 print(res.content)
 # %%

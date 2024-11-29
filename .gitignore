@@ -2,3 +2,5 @@
 .python-version
 .env
 .vscode/
+code/
+*.sqlite3
