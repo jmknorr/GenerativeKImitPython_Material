@@ -30,6 +30,8 @@ dependencies = [
     "unstructured>=0.16.8",
     "wikipedia>=1.4.0",
     "youtube-transcript-api>=0.6.3",
+    "langchain-ollama>=0.2.1",
+    "seaborn>=0.13.2",
 ]
 
 [tool.uv.sources]
