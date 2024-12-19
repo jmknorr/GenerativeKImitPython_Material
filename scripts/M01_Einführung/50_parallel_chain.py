@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv('.env')
 
 #%% Model Instance
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+model = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 #%% Prepare Prompts
 # example: style variations (friendly, polite) vs. (savage, angry)
@@ -22,8 +22,8 @@ savage_prompt = ChatPromptTemplate.from_messages([
 ])
 
 #%% Prepare Chains
-polite_chain = polite_prompt | llm | StrOutputParser()
-savage_chain = savage_prompt | llm | StrOutputParser()
+polite_chain = polite_prompt | model | StrOutputParser()
+savage_chain = savage_prompt | model | StrOutputParser()
 
 
 # %% Runnable Parallel

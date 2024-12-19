@@ -3,6 +3,7 @@ from langchain.document_loaders import TextLoader
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 import os
+from pprint import pprint
 #%% 
 file_name = "data/sherlock_holmes.txt"
 file_name
