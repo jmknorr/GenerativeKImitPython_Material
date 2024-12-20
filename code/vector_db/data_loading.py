@@ -3,7 +3,7 @@ from langchain.document_loaders import TextLoader
 from langchain_community.document_loaders import WebBaseLoader
 import os
 #%% 
-file_name = "sherlock_holmes.txt"
+file_name = "data/sherlock_holmes.txt"
 file_name
 
 #%% 
@@ -11,7 +11,7 @@ file_name
 text_loader = TextLoader(file_path=file_name, encoding="utf-8")
 docs = text_loader.load()
 # %%
-docs
+docs[0].to_json()['kwargs']['page_content']
 # %% lade direkt von Project Gutenberg
 url_sherlock_holmes_book = "https://www.gutenberg.org/cache/epub/1661/pg1661.txt"
 web_loader = WebBaseLoader(web_path=url_sherlock_holmes_book)
