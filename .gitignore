@@ -4,9 +4,10 @@
 .vscode/
 
 *.sqlite3
-
+*.db
 *.faiss
 *.pkl
 *.bin
 *.json
 *.pickle
+uv.lock
