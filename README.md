@@ -55,3 +55,5 @@ Thus, we need to install it manually.
 ```bash
 pip3 install --pre torch --index-url https://download.pytorch.org/whl/nightly/cpu
 ```
+
+# Weitere Materialien
