@@ -33,6 +33,8 @@ dependencies = [
     "langchain-ollama>=0.2.1",
     "seaborn>=0.13.2",
     "ag2>=0.3.2",
+    "langchain-anthropic>=0.3.10",
+    "rich>=13.9.4",
 ]
 
 [tool.uv.sources]
