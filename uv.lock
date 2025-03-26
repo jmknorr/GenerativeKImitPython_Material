@@ -1120,6 +1120,7 @@ dependencies = [
     { name = "langchain-openai" },
     { name = "langgraph" },
     { name = "libmagic" },
+    { name = "markdown" },
     { name = "matplotlib" },
     { name = "pyarrow" },
     { name = "python-dotenv" },
@@ -1154,6 +1155,7 @@ requires-dist = [
     { name = "langchain-openai", specifier = ">=0.2.3" },
     { name = "langgraph", specifier = ">=0.2.39" },
     { name = "libmagic", specifier = ">=1.0" },
+    { name = "markdown", specifier = ">=3.7" },
     { name = "matplotlib", specifier = ">=3.9.2" },
     { name = "pyarrow", specifier = ">=18.1.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
@@ -2388,6 +2390,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/fa/0b/29bc5a230948bf209d3ed3165006d257e547c02c3c2a96f6286320dfe8dc/mako-1.3.6.tar.gz", hash = "sha256:9ec3a1583713479fae654f83ed9fa8c9a4c16b7bb0daba0e6bbebff50c0d983d", size = 390206 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/48/22/bc14c6f02e6dccaafb3eba95764c8f096714260c2aa5f76f654fd16a23dd/Mako-1.3.6-py3-none-any.whl", hash = "sha256:a91198468092a2f1a0de86ca92690fb0cfc43ca90ee17e15d93662b4c04b241a", size = 78557 },
+]
+
+[[package]]
+name = "markdown"
+version = "3.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/54/28/3af612670f82f4c056911fbbbb42760255801b3068c48de792d354ff4472/markdown-3.7.tar.gz", hash = "sha256:2ae2471477cfd02dbbf038d5d9bc226d40def84b4fe2986e49b59b6b472bbed2", size = 357086 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/08/83871f3c50fc983b88547c196d11cf8c3340e37c32d2e9d6152abe2c61f7/Markdown-3.7-py3-none-any.whl", hash = "sha256:7eb6df5690b81a1d7942992c97fad2938e956e79df20cbc6186e9c3a77b1c803", size = 106349 },
 ]
 
 [[package]]
