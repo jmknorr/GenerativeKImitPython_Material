@@ -1,19 +1,18 @@
+
 #%% package
 import pymupdf4llm
 from pprint import pprint
 #%% 
-file_path = "Kursplan-Entwurf4-Feinentwurf-2025-02-23.pdf"
-md_text = pymupdf4llm.to_markdown(file_path)
+file_path = "data/DE102013210737A1.pdf"
+md_text = pymupdf4llm.to_markdown(file_path, pages=[1])
 # %%
 pprint(md_text)
 #%% write to file
-with open("Kursplan-Entwurf4-Feinentwurf-2025-02-23.md", "w") as f:
-    f.write(md_text)
 
 # %% extract images
 md_text_images = pymupdf4llm.to_markdown(
     doc=file_path,
-    pages=[20],
+    pages=[13],
     page_chunks=True,
     write_images=True,
     image_path="images",
