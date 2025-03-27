@@ -1,11 +1,21 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task, before_kickoff, after_kickoff
+import os
+import agentops
+
 
 # Uncomment the following line to use an example of a custom tool
 # from news_analysis.tools.custom_tool import MyCustomTool
 
 # Check our tools documentations for more information on how to use them
-# from crewai_tools import SerperDevTool
+from crewai_tools import SerperDevTool, WebsiteSearchTool
+
+#%% Tools
+search_tool = SerperDevTool()
+website_search_tool = WebsiteSearchTool()
+
+# Initialize AgentOps
+agentops.init(api_key=os.environ.get("AGENTOPS_API_KEY"))
 
 @CrewBase
 class NewsAnalysis():
@@ -24,21 +34,24 @@ class NewsAnalysis():
 	def log_results(self, output):
 		# Example of logging results, dynamically changing the output
 		print(f"Results: {output}")
+		
 		return output
 
 	@agent
 	def researcher(self) -> Agent:
 		return Agent(
 			config=self.agents_config['researcher'],
-			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
-			verbose=True
+			tools=[search_tool, website_search_tool], # Example of custom tool, loaded on the beginning of file
+			verbose=True,
+			
 		)
 
 	@agent
 	def reporting_analyst(self) -> Agent:
 		return Agent(
 			config=self.agents_config['reporting_analyst'],
-			verbose=True
+			verbose=True,
+			
 		)
 
 	@task
@@ -62,5 +75,7 @@ class NewsAnalysis():
 			tasks=self.tasks, # Automatically created by the @task decorator
 			process=Process.sequential,
 			verbose=True,
+			
+   
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)

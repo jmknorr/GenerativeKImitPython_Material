@@ -16,7 +16,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs'
+        'topic': 'Superintelligence'
     }
     NewsAnalysis().crew().kickoff(inputs=inputs)
 
