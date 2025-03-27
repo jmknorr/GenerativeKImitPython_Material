@@ -7,9 +7,9 @@ load_dotenv(find_dotenv())
 #%% LLM config
 llm_config = {
     "config_list": [
-        {"model": "gpt-4o-mini",
-         "temperature": 0.8,
-         "api_key": os.getenv("OPENAI_API_KEY")}
+        {"model": "llama3-8b-8192",
+         "api_key": os.getenv("GROQ_API_KEY"),
+         "base_url": "https://api.groq.com/openai/v1"}
     ]
 }
 
@@ -42,7 +42,7 @@ alice_scientist = ConversableAgent(
 result = jack_flat_earther.initiate_chat(
     recipient=alice_scientist,
     message="Hallo, wie weit ist es bis zum Rand der Erde von Hamburg?",
-    max_turns=10
+    max_turns=4
 )
 # %%
 alice_scientist.initiate_chat(recipient=jack_flat_earther,
