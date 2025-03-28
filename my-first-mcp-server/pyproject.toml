@@ -1,0 +1,19 @@
+[project]
+name = "my-first-mcp-server"
+version = "0.1.0"
+description = "count letters in words"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+ "mcp>=1.6.0",
+]
+[[project.authors]]
+name = "bert.gollnick"
+email = "bert.gollnick@posteo.net"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+my-first-mcp-server = "my_first_mcp_server:main"

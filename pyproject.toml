@@ -39,7 +39,11 @@ dependencies = [
     "pymupdf4llm>=0.0.18",
     "gensim>=4.3.3",
     "einops>=0.8.1",
+    "create-mcp-server>=1.0.5",
 ]
 
 [tool.uv.sources]
 swarm = { git = "ssh://git@github.com/openai/swarm.git" }
+
+[tool.uv.workspace]
+members = ["my-first-mcp-server"]
