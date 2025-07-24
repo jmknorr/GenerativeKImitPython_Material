@@ -2,7 +2,7 @@
 .python-version
 .env
 .vscode/
-
+GEMINI.md
 *.sqlite3
 *.db
 *.faiss
