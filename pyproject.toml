@@ -25,7 +25,6 @@ dependencies = [
     "pyarrow>=18.1.0",
     "python-dotenv>=1.0.1",
     "pytube>=15.0.0",
-    "sentence-transformers>=3.3.0",
     "unstructured>=0.16.8",
     "wikipedia>=1.4.0",
     "youtube-transcript-api>=0.6.3",
@@ -36,12 +35,12 @@ dependencies = [
     "rich>=13.9.4",
     "markdown>=3.7",
     "pymupdf4llm>=0.0.18",
-    "gensim>=4.3.3",
     "einops>=0.8.1",
     "create-mcp-server>=1.0.5",
     "sentencepiece>=0.2.0",
     "huggingface-hub>=0.26.2",
     "langchain-faiss>=0.1.1",
+    "sentence-transformers>=3.3.0",
 ]
 
 [tool.uv.sources]
