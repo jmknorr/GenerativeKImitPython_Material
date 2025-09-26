@@ -1,0 +1,3 @@
+2025-09-26 14:42:55.114 | INFO     | __main__:<module>:23 - Starting data query...
+2025-09-26 14:43:01.525 | INFO     | __main__:table_query:48 - Context from DB: 
+2025-09-26 14:43:05.237 | INFO     | __main__:table_query:70 - Response: I don't know

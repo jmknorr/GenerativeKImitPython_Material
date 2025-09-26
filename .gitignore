@@ -11,3 +11,4 @@ GEMINI.md
 *.json
 *.pickle
 uv.lock
+project_table_rag/data/
